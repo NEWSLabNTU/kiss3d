@@ -34,29 +34,29 @@ conrod = ["conrod_core"]
 
 
 [dependencies]
-bitflags     = "1.2"
-conrod_core  = { version = "0.71", features = ["wasm-bindgen"], optional = true }
-either       = "1"
-glow         = "0.7"
-image        = "0.23"
-instant      = { version = "0.1", features = ["wasm-bindgen"] }
-libc         = "0.2"
-nalgebra     = "0.29"
-ncollide3d   = "0.32"
-num-traits   = "0.2"
-rusttype     = { version = "0.8.3", features = ["gpu_cache"] }
-serde        = "1"
-serde_derive = "1"
+bitflags     = "1.3.2"
+conrod_core  = { version = "0.76.0", features = ["wasm-bindgen"], optional = true }
+either       = "1.6.1"
+glow         = "0.11.0"
+image        = "0.23.14"
+instant      = { version = "0.1.12", features = ["wasm-bindgen"] }
+libc         = "0.2.108"
+nalgebra     = "0.29.0"
+ncollide3d   = "0.32.0"
+num-traits   = "0.2.14"
+rusttype     = { version = "0.9.2", features = ["gpu_cache"] }
+serde        = "1.0.130"
+serde_derive = "1.0.130"
 
 [target.'cfg(not(target_arch = "wasm32"))'.dependencies]
-glutin = "0.26"
+glutin = "0.28.0"
 
 # We repeat all three targets instead of any(target_arch = "wasm32", target_arch = "asmjs")
 # to avoid https://github.com/koute/stdweb/issues/135
 [target.wasm32-unknown-unknown.dependencies]
-getrandom = { version = "0.2", features = ["js"] }
-wasm-bindgen = "0.2"
-web-sys = { version = "0.3", features = [
+getrandom = { version = "0.2.3", features = ["js"] }
+wasm-bindgen = "0.2.78"
+web-sys = { version = "0.3.55", features = [
     "console",
     "KeyEvent",
     "KeyboardEvent",
@@ -76,6 +76,6 @@ web-sys = { version = "0.3", features = [
 ] }
 
 [dev-dependencies]
-nalgebra   = { version = "0.29", features = ["rand"] }
-ncollide2d = "0.32"
-rand       = "0.8"
+nalgebra   = { version = "0.29.0", features = ["rand"] }
+ncollide2d = "0.32.0"
+rand       = "0.8.4"
